@@ -76,4 +76,12 @@ git clone git@github.com:rikosage/weblabs-test.git project
 composer install
 ```
 
+Изменить права доступа к папкам:
+
+```
+cd /path/to/project
+sudo chmod -R 777 runtime
+sudo chmod -R 777 web/assets
+```
+
 После всех действий проект будет доступен по указанному вами адресу.
