@@ -1,9 +1,10 @@
 <?php
 
-namespace beejee\base\traits;
+namespace app\traits;
 
 /**
  * Трейт для удобной работы с классами.
+ * Довольно давно таскаю его из проекта в проект
  */
 trait ClassIdentityTrait
 {
@@ -29,7 +30,7 @@ trait ClassIdentityTrait
     /**
      * Проверка на существование метода в классе
      * @param  string  $methodName Искомый метод
-     * @return boolean             
+     * @return boolean
      */
     public function isMethodExists($methodName)
     {

@@ -7,8 +7,15 @@ use yii\web\Controller;
 use app\models\LoginForm;
 use app\models\User;
 
+/**
+ * Контроллер для основного экшена
+ */
 class SiteController extends Controller
 {
+    /**
+     * Точка обработки запросов с главной страницы
+     * @return [type] [description]
+     */
     public function actionIndex()
     {
         $model = new LoginForm;
@@ -20,12 +27,11 @@ class SiteController extends Controller
         }
 
         $user = new User;
-        $user->load($model->getUserdata());
-
-        var_dump($user);exit;
+        $user->load($model->getUserdataAsForm($user));
 
         return $this->render("index", [
             'model' => $model,
+            'user' => $user,
         ]);
     }
 }
